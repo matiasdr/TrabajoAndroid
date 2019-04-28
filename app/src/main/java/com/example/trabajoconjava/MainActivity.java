@@ -46,8 +46,33 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnZoomMas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomMas();
+            }
+        });
 
+        btnZoomMenos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ZoomMenos();
+            }
+        });
 
+        btnOcultar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Ocultar();
+            }
+        });
+
+        btnReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Reset();
+            }
+        });
     }
 
     private void Sumar(){
@@ -65,22 +90,23 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void ZoomMas(View v){
-        txtNumero.setTextSize(txtNumero.getTextSize()+(6));
+    private void ZoomMas(){
+        txtNumero.setTextSize(30);
     }
 
 
-    private void ZoomMenos(View v){
-        txtNumero.setTextSize(txtNumero.getTextSize()-(6));
+    private void ZoomMenos(){
+        txtNumero.setTextSize(14);
     }
 
-    private void Ocultar(View v){
+    private void Ocultar(){
         txtNumero.setVisibility(View.INVISIBLE);
     }
 
-    private void Reset(View v){
+    private void Reset(){
         txtNumero.setText("0");
         txtNumero.setVisibility(View.VISIBLE);
+        txtNumero.setTextSize(14);
     }
 /*
     @Override
