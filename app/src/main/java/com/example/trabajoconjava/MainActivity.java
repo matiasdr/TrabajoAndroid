@@ -31,6 +31,12 @@ public class MainActivity extends AppCompatActivity {
         txtNumero.setText(String.valueOf(valor));
         btnSumar = findViewById(R.id.btnSumar);
         btnRestar = findViewById(R.id.btnRestar);
+        btnZoomMas = findViewById(R.id.btnZoomSumar);
+        btnZoomMenos = findViewById(R.id.btnZoomMenos);
+        btnReset = findViewById(R.id.btnReset);
+        btnOcultar = findViewById(R.id.btnOcultar);
+
+
 
         btnSumar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -104,6 +110,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void Reset(){
+        valor=0;
         txtNumero.setText("0");
         txtNumero.setVisibility(View.VISIBLE);
         txtNumero.setTextSize(14);
