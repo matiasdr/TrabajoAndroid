@@ -113,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
         valor=0;
         txtNumero.setText("0");
         txtNumero.setVisibility(View.VISIBLE);
-        txtNumero.setTextSize(14);
+        txtNumero.setTextSize(18);
     }
 /*
     @Override

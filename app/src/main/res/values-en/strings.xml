@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TrabajoConJava</string>
+    <string name="actividad_2_moviles">ACTIVITY 2 - MOBILES</string>
+    <string name="ocultar">Hide</string>
+    <string name="reset">Reset</string>
+    <string name="restar">Subtract</string>
+    <string name="sumar">Add</string>
+    <string name="zoom">Zoom +</string>
+    <string name="zoomMenos">Zoom -</string>
+</resources>

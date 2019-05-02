@@ -2,11 +2,14 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorPrimaryLight"
     tools:context=".MainActivity">
 
     <ScrollView
+        android:id="@+id/scrollView2"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -24,9 +27,11 @@
                 android:id="@+id/btnSumar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="290dp"
-                android:text="Sumar"
-                app:layout_constraintEnd_toStartOf="@+id/imageView"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="288dp"
+                android:background="@color/colorAccent"
+                android:text="@string/sumar"
+                app:layout_constraintStart_toStartOf="@+id/textView2"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
@@ -34,7 +39,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Zoom +"
+                android:background="@color/colorAccent"
+                android:text="@string/zoom"
                 app:layout_constraintEnd_toEndOf="@+id/btnSumar"
                 app:layout_constraintTop_toBottomOf="@+id/btnSumar" />
 
@@ -43,7 +49,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Reset"
+                android:background="@color/colorAccent"
+                android:text="@string/reset"
                 app:layout_constraintStart_toStartOf="@+id/btnZoomMenos"
                 app:layout_constraintTop_toBottomOf="@+id/btnZoomMenos" />
 
@@ -67,7 +74,8 @@
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="32dp"
                 android:layout_marginEnd="8dp"
-                android:text="ACTIVIDAD 2 - MOVILES"
+                android:text="@string/actividad_2_moviles"
+                android:textColor="@android:color/black"
                 android:textSize="24sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -78,7 +86,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-                android:text="Ocultar"
+                android:background="@color/colorAccent"
+                android:text="@string/ocultar"
                 app:layout_constraintEnd_toEndOf="@+id/btnZoomSumar"
                 app:layout_constraintTop_toBottomOf="@+id/btnZoomSumar" />
 
@@ -86,9 +95,11 @@
                 android:id="@+id/btnRestar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="290dp"
-                android:text="Restar"
-                app:layout_constraintStart_toEndOf="@+id/imageView"
+                android:layout_marginTop="288dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/colorAccent"
+                android:text="@string/restar"
+                app:layout_constraintEnd_toEndOf="@+id/textView2"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <Button
@@ -96,7 +107,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="49dp"
                 android:layout_marginTop="32dp"
-                android:text="Zoom -"
+                android:background="@color/colorAccent"
+                android:text="@string/zoomMenos"
                 app:layout_constraintStart_toStartOf="@+id/btnRestar"
                 app:layout_constraintTop_toBottomOf="@+id/btnRestar" />
 
@@ -113,5 +125,11 @@
                 app:srcCompat="@drawable/calc" />
         </android.support.constraint.ConstraintLayout>
     </ScrollView>
+
+    <android.support.constraint.Barrier
+        android:id="@+id/barrier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:barrierDirection="left" />
 
 </android.support.constraint.ConstraintLayout>
